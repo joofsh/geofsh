@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jonathanpagano@gmail.com"]
   gem.description   = %q{Simple geolocation generator}
   gem.summary       = %q{Provides latitude and longitude from HTML5 API}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/joofsh/Geofsh"
 
   gem.add_dependency "railties", "~> 3.1"
 
