@@ -20,6 +20,10 @@ Or install it yourself as:
 
 This gem allows you to easily add latitude and longitude to form fields. To any form input fields, simply add the css id "latitude" and "longitude" and those fields will automatically be filled with geolocation data. If you would like fields to be hidden when geolocation fails, simply add the class "geoloc-hide" to the input field.
 
+To include geofsh geolocation for a specific page, include the geofsh javascript file:
+
+    = javascript_include_tag 'geofsh'
+
 An example of using Geofsh with simple_form:
 
     = f.input :geolat, label: "Latitude", input_html: { id: "latitude", class: "geoloc-hide" }
