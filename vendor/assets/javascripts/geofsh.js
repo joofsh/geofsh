@@ -1,4 +1,3 @@
-(function() {
   var errorCallback, getPosition, hideAddressAndZip, hideGeoLoc, successCallback;
 
   successCallback = function(position) {
@@ -13,7 +12,7 @@
 
 
   hideGeoLoc = function() {
-    return $('.geoloc').parent().hide();
+    return $('.geoloc-hide').parent().hide();
   };
 
   getPosition = function() {
@@ -28,6 +27,4 @@
 $(function() {
     return getPosition();
 });
-
-}).call(this);
 

@@ -12,6 +12,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Provides latitude and longitude from HTML5 API}
   gem.homepage      = ""
 
+  gem.add_dependency "railties", "~> 3.1"
+
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
