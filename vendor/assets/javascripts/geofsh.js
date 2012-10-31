@@ -1,11 +1,11 @@
-  var errorCallback, getPosition, hideAddressAndZip, hideGeoLoc, successCallback;
+  var geolocError, getPosition, hideAddressAndZip, hideGeoLoc, geolocSuccess;
 
-  successCallback = function(position) {
+  geolocSuccess = function(position) {
       $('input#latitude').val(position.coords.latitude);
       return $('input#longitude').val(position.coords.longitude);
   };
 
-  errorCallback = function() {
+  geolocError = function() {
     hideGeoLoc();
     return "Geolocation Unsuccessful";
   };
@@ -17,7 +17,7 @@
 
   getPosition = function() {
     if (navigator.geolocation) {
-    return navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    return navigator.geolocation.getCurrentPosition(geolocSuccess, geolocError);
     } else {
     hideGeoLoc();
     return "Geolocation not supported";
