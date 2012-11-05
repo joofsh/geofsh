@@ -29,6 +29,10 @@ An example of using Geofsh with simple_form:
     = f.input :geolat, label: "Latitude", input_html: { id: "latitude", class: "geoloc-hide" }
     = f.input :geolng, label: "Longitude", input_html: { id: "longitude", class: "geoloc-hide" }
 
+Before deploying to production, you must also add 'geofsh.js' to the precompile list in your config/application.rb:
+
+    config.assets.precompile += %w(foo bar geofsh.js)
+
 ## Contributing
 
 1. Fork it
