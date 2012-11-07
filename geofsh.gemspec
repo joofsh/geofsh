@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Geofsh::VERSION
   gem.authors       = ["Jon Pagano"]
   gem.email         = ["jonathanpagano@gmail.com"]
-  gem.description   = %q{Simple geolocation generator}
-  gem.summary       = %q{Provides latitude and longitude from HTML5 API}
+  gem.description   = %q{Geolocation Form Submission Helper}
+  gem.summary       = %q{Provides latitude and longitude from HTML5 geolocation API and automatically places them in corresponding form fields}
   gem.homepage      = "https://github.com/joofsh/geofsh"
 
   gem.add_dependency "railties", "~> 3.1"
