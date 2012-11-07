@@ -1,3 +1,4 @@
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDBmbRrJZrO5IExRamjDLBgyWzTLs1Ohx8&sensor=false" %>
 <%= javascript_include_tag 'geofsh' %>
 
 <p> This is your latitude and longitude input fields. Are they working? </p>
@@ -5,3 +6,7 @@
 <%= text_field_tag 'latitude', nil, :class => 'geoloc-hide' %>
 <%= label_tag :Longitude  %>
 <%= text_field_tag 'longitude', nil, :class => 'geoloc-hide' %>
+
+<p> This is your google map of the above coordinates </p>
+
+<div id='google-map'/>
