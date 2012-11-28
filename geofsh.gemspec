@@ -12,6 +12,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Provides latitude and longitude from HTML5 geolocation API and automatically places them in corresponding form fields}
   gem.homepage      = "https://github.com/joofsh/geofsh"
 
+  gem.add_dependency "coffee-rails", "~> 3.2.1"
   gem.add_dependency "railties", "~> 3.1"
 
   gem.files         = `git ls-files`.split($/)
