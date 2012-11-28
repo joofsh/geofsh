@@ -32,9 +32,7 @@ An example of using Geofsh with simple_form:
 
 Google maps can easily be incorporated into your rails app using geofsh gem.  First, you must include google's javascript api:
 
-    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&sensor=false"
-
-For instructions on how to recieve a google map's API key, visit [Google's api tutorial](https://developers.google.com/maps/documentation/javascript/tutorial#api_key). 
+    = javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"
 
 To enable google maps in your rails app, simply add a div to your view with the element id 'google-map':
 
