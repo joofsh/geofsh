@@ -1,13 +1,12 @@
 googleMap = (geolat, geolng) ->
-  if document.getElementById("google-map")
-    geoCoords = new google.maps.LatLng(geolat, geolng)
-    mapOptions =
-      zoom: 16
-      center: geoCoords
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+  geoCoords = new google.maps.LatLng(geolat, geolng)
+  mapOptions =
+    zoom: 16
+    center: geoCoords
+    mapTypeId: google.maps.MapTypeId.ROADMAP
 
-    map = new google.maps.Map(document.getElementById("google-map"), mapOptions)
-    addMarker geoCoords, map, "You are here!"
+  map = new google.maps.Map(document.getElementById("google-map"), mapOptions)
+  addMarker geoCoords, map, "You are here!"
 
 addMarker = (position, map, title) ->
   marker = new google.maps.Marker(
@@ -19,9 +18,9 @@ addMarker = (position, map, title) ->
 geolocSuccess = (position) ->
   geolat = position.coords.latitude
   geolng = position.coords.longitude
-  $("input#latitude").val geolat
-  $("input#longitude").val geolng
-  googleMap geolat, geolng
+  $("input#latitude").val geolat if $("input#latitude")
+  $("input#longitude").val geolng if $("input#longitude")
+  googleMap geolat, geolng if $("#google-map")
 
 geolocError = ->
   hideGeoLoc()
@@ -30,7 +29,7 @@ geolocError = ->
 hideGeoLoc = ->
   $(".geoloc-hide").parent().hide()
 
-@getPosition = ->
+getPosition = ->
   if navigator.geolocation
     navigator.geolocation.getCurrentPosition geolocSuccess, geolocError
   else
